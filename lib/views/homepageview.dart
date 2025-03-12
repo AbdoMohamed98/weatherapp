@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:weatherapp/widgets/customappbar.dart';
 
 class Homepageview extends StatelessWidget {
   const Homepageview({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('there is no weather😔start',style: TextStyle(
-            color: Colors.black
-          ), ),
-          Text('searching now 🔍',style: TextStyle(color: Colors.black),)
+          const Customappbar(), // App bar at the top
+          Expanded( // Ensures content takes available space
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text('There is no weather 😔 start'),
+                  Text('Searching now 🔍'),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
