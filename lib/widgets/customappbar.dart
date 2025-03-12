@@ -7,16 +7,20 @@ class Customappbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromARGB(255, 52, 121, 167),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       child: Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 12),
-            child: const Text('weather'),
+          const Text(
+            'Weather',
+            style: TextStyle(fontSize: 20, color: Colors.white),
           ),
-          Spacer(flex: 1,),
-          IconButton(onPressed: () {
-            
-          }, icon:Icon(Icons.search) )
+          const Spacer(),
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, 'Searchview'); // ✅ Directly navigate
+            },
+            icon: const Icon(Icons.search, color: Colors.white),
+          ),
         ],
       ),
     );
