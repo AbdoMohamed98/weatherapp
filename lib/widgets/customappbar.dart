@@ -17,7 +17,7 @@ class Customappbar extends StatelessWidget {
           const Spacer(),
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, 'Searchview'); // ✅ Directly navigate
+              Navigator.pushNamed(context, 'Weatherinfobody'); // ✅ Directly navigate
             },
             icon: const Icon(Icons.search, color: Colors.white),
           ),
