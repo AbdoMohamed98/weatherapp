@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:weatherapp/models/getwethermodel.dart';
+import 'package:weatherapp/services/getweatherservice.dart';
 import 'package:weatherapp/views/homepageview.dart';
 import 'package:weatherapp/views/searchview.dart';
 import 'package:weatherapp/views/weatherinfobody.dart';
 
-void main() {
+void main() async {
   runApp(NewsApp());
+   Getweatherservice().getweatherinfo();
+  
 }
 
 class NewsApp extends StatelessWidget {
@@ -12,10 +16,12 @@ class NewsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {'Searchview': (context) => Searchview(),
-      'Weatherinfobody':(context)=>Weatherinfobody()},
+      routes: {
+        'Searchview': (context) => Searchview(),
+        'Weatherinfobody': (context) => Weatherinfobody()
+      },
       initialRoute: 'Homepageview',
       home: Homepageview(),
     );
