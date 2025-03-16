@@ -1,7 +1,9 @@
+import 'package:weatherapp/models/getwethermodel.dart';
+
 class Weatherstatus {}
 
 class Noweatherbody extends Weatherstatus {}
 
-class Wetherinfobody extends Weatherstatus {}
+class Weatherinfobody extends Weatherstatus {}
 
-class Srearchweather extends Weatherstatus {}
+class Weatherfailurestate extends Weatherstatus {}

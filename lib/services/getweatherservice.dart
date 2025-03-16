@@ -3,10 +3,10 @@ import 'package:weatherapp/models/getwethermodel.dart';
 
 class Getweatherservice {
   Dio dio = Dio();
-  Future<dynamic> getweatherinfo() async {
+  Future<dynamic> getweatherinfo({required String cityname}) async {
     try {
       Response response = await dio.get(
-          'http://api.weatherapi.com/v1/marine.json?key=4fe825e036454f89ad9112352242612&q=London&days=1');
+          'http://api.weatherapi.com/v1/marine.json?key=4fe825e036454f89ad9112352242612&q=$cityname&days=1');
       if (response.statusCode == 200) {
         Map<String, dynamic> weatherinfo = response.data;
         // Map<String, dynamic> weatherdata = {
@@ -16,7 +16,7 @@ class Getweatherservice {
         // };
         Getwethermodel getwethermodel =
             Getwethermodel.fromjsonData(weatherinfo);
-        print(getwethermodel);
+        return getwethermodel;
       } else {
         print('request failed with status : ${response.statusCode}');
       }
