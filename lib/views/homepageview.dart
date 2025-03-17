@@ -16,7 +16,7 @@ class Homepageview extends StatelessWidget {
       body: BlocBuilder<Getweathercubit, Weatherstatus>(
         builder: (context, state) {
           if (state is Weatherinfobody) {
-            return Weatherinfoview() ;
+            return Weatherinfoview(getwethermodellll: state.getwethermodelll) ;
           } else if (state is Noweatherbody) {
             return Noweatherview() ;
           } else {

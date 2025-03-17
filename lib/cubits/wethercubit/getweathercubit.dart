@@ -10,8 +10,8 @@ class Getweathercubit extends Cubit<Weatherstatus> {
   Dio dio = Dio();
   getweatherinfo({required String cityname}) async {
     try {
-      Getwethermodel getwethermodel = await Getweatherservice().getweatherinfo(cityname: cityname );
-      emit(Weatherinfobody());
+      Getwethermodel getwethermodell = await Getweatherservice().getweatherinfo(cityname: cityname );
+      emit(Weatherinfobody(getwethermodelll: getwethermodell));
     } catch (e) {
       emit(Weatherfailurestate());
     }
