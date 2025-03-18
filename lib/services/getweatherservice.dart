@@ -9,11 +9,7 @@ class Getweatherservice {
           'http://api.weatherapi.com/v1/marine.json?key=4fe825e036454f89ad9112352242612&q=$cityname&days=1');
       if (response.statusCode == 200) {
         Map<String, dynamic> weatherinfo = response.data;
-        // Map<String, dynamic> weatherdata = {
-        //   'location' : weatherinfo['location'],
-        //   'forecast': weatherinfo['forecast']['forecastday'][0]['day'],
-
-        // };
+        
         Getwethermodel getwethermodel =
             Getwethermodel.fromjsonData(weatherinfo);
         return getwethermodel;

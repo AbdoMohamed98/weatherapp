@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 
 class Getwethermodel {
   final String cityname;
@@ -9,15 +8,7 @@ class Getwethermodel {
   final double maxtemp;
   final double mintemp;
   @override
-// String toString() {
-//   return 'City: $cityname, '
-//          'Updated: $updatetime, '
-//          'Image: $image, '
-//          'Condition: $condition, '
-//          'Temp: $temp°C, '
-//          'Max Temp: $maxtemp°C, '
-//          'Min Temp: $mintemp°C';
-// }
+
 
 
   Getwethermodel(
@@ -33,7 +24,7 @@ class Getwethermodel {
         cityname: jsonData['location']['name'],
         updatetime: jsonData['location']['localtime'],
         image: jsonData['forecast']['forecastday'][0]['day']['condition']['icon'],
-        condition: jsonData['forecast']['forecastday'][0]['astro']['moon_phase'],
+        condition: jsonData['forecast']['forecastday'][0]['day']['condition']['text'],
         temp: jsonData['forecast']['forecastday'][0]['day']['avgtemp_c'],
         maxtemp: jsonData['forecast']['forecastday'][0]['day']['maxtemp_c'],
         mintemp: jsonData['forecast']['forecastday'][0]['day']['mintemp_c']);

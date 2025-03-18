@@ -8,7 +8,12 @@ class Searchview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      appBar: AppBar(
+        title: Text('Search city'),
+        backgroundColor: const Color.fromARGB(255, 52, 121, 161),
+      ),
+      body: 
+      Center(
         child: Padding(
           padding: EdgeInsets.only(left: 150, right: 150),
           child: TextField(

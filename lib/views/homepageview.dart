@@ -3,9 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weatherapp/cubits/wethercubit/getweathercubit.dart';
 import 'package:weatherapp/models/weatherstatus.dart';
 import 'package:weatherapp/views/noweatherview.dart';
-import 'package:weatherapp/views/searchview.dart';
 import 'package:weatherapp/views/weatherinfoview.dart';
-import 'package:weatherapp/widgets/customappbar.dart';
 
 class Homepageview extends StatelessWidget {
   const Homepageview({super.key});
@@ -27,4 +25,3 @@ class Homepageview extends StatelessWidget {
     );
   }
 }
-
